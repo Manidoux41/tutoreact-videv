@@ -3,10 +3,20 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Arial" sans-serif;
+  background: lightblue;
 }
 
 body {
-  background: lightblue;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.App {
+  padding: 25px;
+}
+
+h1 {
+  padding: 15px 0;
 }
 
 /*# sourceMappingURL=main.css.map */
