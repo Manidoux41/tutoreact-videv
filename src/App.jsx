@@ -3,18 +3,19 @@ import { useState } from "react"
 const App = () => {
 
 // state
-const [counter, setCounter] = useState(1)
 
 // comportements
-const handleClick = () => {
-    setCounter(counter+ + 1)
-}
+
 
 // affichage
   return (
     <div className='App'>
-        <h1>{counter}</h1>
-        <button onClick={handleClick}>Increment</button>
+        <h1>Liste de fruits</h1>
+        <ul>
+            <li>Abricot</li>
+            <li>Banane</li>
+            <li>Cerise</li>
+        </ul>
     </div>
   )
 }
