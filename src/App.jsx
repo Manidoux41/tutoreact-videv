@@ -10,8 +10,18 @@ const [fruits, setFruits] = useState([
 ])
 const voiture = <li>Tesla</li>
 // comportements
-const handleDelete = () => {
-    console.log('handleDelete');
+const handleDelete = (id) => {
+    console.log(id);
+    // 1.copie du state
+      // version 1 : const fruitsCopy = fruits.slice();
+      //ou
+      const fruitsCopy = [...fruits];
+
+    // 2.manipuler mon state
+    const fruitCopyUpdated= fruitsCopy.filter(fruit => fruit.id !== id)
+
+    // 3. modifier mon state avec le setter
+    setFruits(fruitCopyUpdated);
 }
 
 // affichage
@@ -19,7 +29,7 @@ const handleDelete = () => {
     <div className='App'>
         <h1>Liste de fruits</h1>
         <ul>{fruits.map((fruit) => 
-            <li key={fruit.id}>{fruit.nom} <button onClick={handleDelete}>X</button></li>)}</ul>
+            <li key={fruit.id}>{fruit.nom} <button onClick={() => handleDelete(fruit.id)}>X</button></li>)}</ul>
     </div>
   )
 }
