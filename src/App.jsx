@@ -3,7 +3,11 @@ import { useState } from "react"
 const App = () => {
 
 // state
-
+useState([
+    { id: 1, nom: "Abricot" },
+    { id: 2, nom: "Banane" },
+    { id: 3, nom: "Cerise" }
+])
 // comportements
 
 
