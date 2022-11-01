@@ -1,10 +1,17 @@
-import React from 'react'
-import './styles/css/main.css'
+import { useState } from "react"
 
 const App = () => {
+
+// state
+const [counter, setCounter] = useState(1)
+
+// comportements
+
+
+// affichage
   return (
     <div className='App'>
-        <h1>Tuto React</h1>
+        <h1>{counter}</h1>
     </div>
   )
 }
